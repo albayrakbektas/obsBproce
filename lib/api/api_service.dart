@@ -49,8 +49,9 @@ class ExamNesne {
 
 Future<ExamData> getExamList(
     String userName, String password, String termId) async {
+
   final response = await http.post(
-    Uri.parse("http://obs.vproce.net/API/sinavListesi"),
+    Uri.parse(GET_EXAM_API),
     headers: {
       'Content-Type': 'application/json',
       "Access-Control-Allow-Origin": "*",
@@ -134,7 +135,7 @@ class Nesne {
 
 Future<Data> login(String userName, String password) async {
   final response = await http.post(
-    Uri.parse("http://obs.vproce.net/API/Login"),
+    Uri.parse(LOGIN_API),
     headers: {
       'Content-Type': 'application/json',
       "Access-Control-Allow-Origin": "*",
@@ -216,7 +217,7 @@ class Sinav {
 
 Future<Course> getCourseContent(String ogrenciNumarasi, String subeId) async {
   final response = await http.post(
-    Uri.parse("http://obs.vproce.net/API/DersBilgileri"),
+    Uri.parse(GET_COURSE_API),
     headers: {
       'Content-Type': 'application/json',
       "Access-Control-Allow-Origin": "*",

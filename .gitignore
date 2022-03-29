@@ -1,5 +1,3 @@
-api
-
 #assets
 # Miscellaneous
 *.class
@@ -36,6 +34,7 @@ api
 
 # Web related
 lib/generated_plugin_registrant.dart
+*globals.dart
 
 # Symbolication related
 app.*.symbols
